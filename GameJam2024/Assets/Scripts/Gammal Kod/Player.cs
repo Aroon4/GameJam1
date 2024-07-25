@@ -16,12 +16,17 @@ public class Player : MonoBehaviour
 
     //Referens till animatorn
     [SerializeField]private Animator anim;
-
+    //Audio
+    public AudioSource audiosource;
+    [SerializeField] private Transform groundCheckTransform;
+    [SerializeField] private float groundCheckRadius;
+    [SerializeField] private LayerMask groundCheckLayers;
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>(); //hämtar spelarens rigidbody
         controller = GetComponent<CharacterController2D>(); //hätar lite stulen kod som gör att karaktären kan gå
+        //audiosource = GetComponent<AudioSource>(); //hämtar audio
     }
 
     void Update()
@@ -59,6 +64,23 @@ public class Player : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+
+         if(horizontalMove < -0.1f || horizontalMove > 0.1f)
+        {
+            if (!audiosource.isPlaying)
+            {
+                audiosource.Play();
+            }
+        } 
+        else //if(moveInput == 0)
+        {
+            audiosource.Stop();
+        }
+        if (GroundCheck() == false)
+        {    
+            audiosource.Stop();
+        }
+
     }
 
     public void AddMoney(int amount)
@@ -75,6 +97,15 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
+
     }
     
+    public bool GroundCheck()
+    {
+        return Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundCheckLayers);
+    }
+    
+
 }

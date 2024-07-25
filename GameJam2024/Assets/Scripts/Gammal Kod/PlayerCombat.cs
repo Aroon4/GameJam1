@@ -13,6 +13,14 @@ public class PlayerCombat : MonoBehaviour
 
     [SerializeField]private Animator anim;
 
+    public AudioSource audiosource;
+
+
+    void Start()
+    {
+        //audiosource = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -23,8 +31,17 @@ public class PlayerCombat : MonoBehaviour
                 Attack();
                 nextAttackTime = Time.time + 1 / attackRate;
                 //Debug.Log("Attack");
+
+                // attack audio:
+                if(!audiosource.isPlaying)
+                {
+                    audiosource.Play();
+                }
             } 
-        }  
+        } 
+
+
+
     }
 
     public void Attack()
@@ -49,4 +66,7 @@ public class PlayerCombat : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    
+
 }
