@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     float horizontalMove = 0;
     bool jump = false;
     public bool crouch = false;
+    [SerializeField] private int health = 100;
 
     [SerializeField]private Rigidbody2D rb2D;
     [SerializeField]private CharacterController2D controller;
@@ -65,5 +66,15 @@ public class Player : MonoBehaviour
         money += amount;
     }
 
+
+    public void TakeDamge(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     
 }

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8823173622058241474}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   runSpeed: 40
   money: 0
   crouch: 0
+  health: 100
   rb2D: {fileID: 0}
   controller: {fileID: 0}
   anim: {fileID: 8823173622058241474}
