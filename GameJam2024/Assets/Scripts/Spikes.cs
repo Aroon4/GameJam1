@@ -9,7 +9,7 @@ public class Spikes : MonoBehaviour
         if ( collision.gameObject.CompareTag("Player")) // letar efter om player krockar med föremålet
         {
             Player player = collision.gameObject.GetComponent<Player>(); // hämtar referens för player
-            player.TakeDamge(10); //Skadar player
+            player.TakeDamge(100); //Skadar player
         }
     }
 }

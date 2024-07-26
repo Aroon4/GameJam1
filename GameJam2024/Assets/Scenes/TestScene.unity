@@ -122,11 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &237943623 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9156266758699839492, guid: 5d018a066fe7e7241878293abc763fe2, type: 3}
-  m_PrefabInstance: {fileID: 6887036313857514658}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &331747573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2396220963185920788, guid: b0f8eea72dedae24ebaa038049b4b3d8, type: 3}
@@ -399,7 +394,7 @@ MonoBehaviour:
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -814,10 +809,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8664961421485392712, guid: 5d018a066fe7e7241878293abc763fe2, type: 3}
-      propertyPath: Sprite
-      value: 
-      objectReference: {fileID: 237943623}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

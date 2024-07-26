@@ -131,7 +131,6 @@ Transform:
   m_Children:
   - {fileID: 3965130933034560620}
   - {fileID: 4133739242234885627}
-  - {fileID: 4364233521247390279}
   - {fileID: 8930269158250892728}
   - {fileID: 9156266758699839492}
   m_Father: {fileID: 0}
@@ -220,7 +219,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 4133739242234885627}
   m_CeilingCheck: {fileID: 3965130933034560620}
   m_CrouchDisableCollider: {fileID: 0}
-  Sprite: {fileID: 6853573045564525394}
+  Sprite: {fileID: 9156266758699839492}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -595,7 +594,7 @@ Transform:
   m_GameObject: {fileID: 7528342808972902593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: 0.73, z: 0}
+  m_LocalPosition: {x: -0.051, y: 0.809, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -632,6 +631,7 @@ Transform:
   m_Children:
   - {fileID: 2184994523612540527}
   - {fileID: 9213111139071569880}
+  - {fileID: 4364233521247390279}
   m_Father: {fileID: 6853573045564525394}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7631718235325599104
@@ -658,12 +658,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7631718235325599104}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0.29, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5999999, y: 0.28999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6853573045564525394}
+  m_Father: {fileID: 9156266758699839492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8641602038072295728
 GameObject:
@@ -690,7 +690,7 @@ Transform:
   m_GameObject: {fileID: 8641602038072295728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -0.96, z: 0}
+  m_LocalPosition: {x: -0.025, y: -0.992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

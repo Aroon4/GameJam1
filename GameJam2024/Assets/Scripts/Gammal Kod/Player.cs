@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public bool crouch = false;
     [SerializeField] private int health = 100;
 
+    Vector2 reSpawnPoint;
+
     [SerializeField]private Rigidbody2D rb2D;
     [SerializeField]private CharacterController2D controller;
 
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>(); //hämtar spelarens rigidbody
         controller = GetComponent<CharacterController2D>(); //hätar lite stulen kod som gör att karaktären kan gå
         //audiosource = GetComponent<AudioSource>(); //hämtar audio
+        reSpawnPoint = transform.position;
     }
 
     void Update()
@@ -95,11 +98,17 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            die();
         }
 
 
 
+    }
+
+    public void die()
+    {
+        transform.position = reSpawnPoint;
+        health = 100;
     }
     
     public bool GroundCheck()
