@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField]private Animator anim;
     //Audio
     public AudioSource audiosource;
+    public AudioSource audiosource2;
     [SerializeField] private Transform groundCheckTransform;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundCheckLayers;
@@ -95,12 +96,12 @@ public class Player : MonoBehaviour
     public void TakeDamge(int damage)
     {
         health -= damage;
+        audiosource2.Play();
 
         if (health <= 0)
         {
             die();
         }
-
 
 
     }
